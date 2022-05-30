@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Sihong He</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b9f746a1-8ce5-41f7-956f-150d65552470" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_ibm_type_704.jpg" style="object-position:center 34.089999999999996%"/><h1 class="page-title">Sihong He</h1></header><div class="page-body"><p id="76e1628f-1044-4a7f-8ab9-34081f67f59f" class="">Hi, my name is Sihong He. I am a 3rd-year Ph.D. student in computer science and engineering at the <a href="https://www.cse.uconn.edu">University of Connecticut</a> working with <a href="http://feimiao.org">Prof. Fei Miao</a>.</p><p id="463be7b7-e3e7-4c02-a4b7-0e8c7aa93751" class="">My research interests include </p><ul id="a1586c81-cf1e-470c-a83b-9790b7994879" class="bulleted-list"><li style="list-style-type:disc">Reinforcement Learning (RL, MARL, Robust RL, Robust MARL)</li></ul><ul id="d50af955-fe69-4bf9-8592-ee261b7bd5c3" class="bulleted-list"><li style="list-style-type:disc">Optimization (Robust Optimization, Distributionally Robust Optimization)</li></ul><ul id="3d654a64-7729-4741-8d92-21ea8c1bec39" class="bulleted-list"><li style="list-style-type:disc">Smart City (AMoD System, Electric Vehicle)</li></ul><ul id="0ee3a0e2-4ed7-4541-9d4e-6087da083090" class="bulleted-list"><li style="list-style-type:disc">Diversified Portfolios</li></ul><p id="c010bb96-1804-47e5-94c8-d387052bfd2c" class=""><mark class="highlight-red"><strong>[Open to Collaboration]</strong></mark><strong> </strong> I am looking for undergraduate and master&#x27;s students to work on: (1) robust reinforcement learning, (2) multi-agent reinforcement learning, and (3) smart city. If you are interested in these topics and strongly self-motivated, feel free to send me an email with your resume and the interesting topic. UConn and non-UConn Students are both welcome, and students who would like to apply to Ph.D. programs are extremely welcome. </p><h2 id="efce37c7-7b01-402c-ad7c-650ca5ec2239" class="">Journal</h2><ol type="1" id="2b1908bc-56b4-4453-880c-7f17de7cbfe6" class="numbered-list" start="1"><li><strong>Data-Driven Distributionally Robust Electric Vehicle Balancing for Autonomous Mobility-on-Demand Systems under Demand and Supply Uncertainties (preprint)</strong><p id="c13329af-c978-4e49-91c2-fd0a096916dc" class=""><mark class="highlight-red"><strong>Sihong He</strong></mark><mark class="highlight-blue">, Zhili Zhang, Shuo Han, Lynn Pepin, Guang Wang, Desheng Zhang, John A. Stankovic, and Fei Miao</mark></p></li></ol><ol type="1" id="14f37ef1-4b1f-43b6-93bf-a76cb5bcc5b8" class="numbered-list" start="2"><li><strong>FairMove: Data-Driven Fairness-Aware Deep Reinforcement Learning for Large-Scale Electric Taxi Fleet Management (preprint)</strong><p id="d2d0ea8c-8df0-45a8-8dd3-f5cd8f8cda1c" class="block-color-blue">Guang Wang, Shuxin Zhong, <mark class="highlight-red"><strong>Sihong He</strong></mark>, Shuai Wang, Fei Miao, Zheng Dong, and Desheng Zhang</p></li></ol><ol type="1" id="3d5c59e8-fd3f-4e63-9a42-42efc87d40ac" class="numbered-list" start="3"><li><strong>Data-Driven Distributionally Robust Vehicle Balancing for Mobility on Demand Systems (TCPS 2021)</strong><p id="674215c9-f545-4763-b756-55773d9473bc" class="block-color-blue">Fei Miao, <mark class="highlight-red"><strong>Sihong He</strong></mark>, Lynn Pepin, Shuo Han, Abdeltawab M. Hendawi, Mohamed E. Khalefa, John A. Stankovic, and George J. Pappas</p></li></ol><h2 id="d68c322a-1adf-4857-87c2-0ab4f3f13c50" class="">Conference</h2><ol type="1" id="64ac71b3-de1d-4444-8202-7c27765fc4a6" class="numbered-list" start="1"><li><strong>Robust Multi-Agent Reinforcement Learning with Adversarial State Uncertainty (preprint)</strong><p id="46bc31f8-6b48-4a01-b7e3-71345c5580d5" class="block-color-blue"><mark class="highlight-red"><strong>Sihong He</strong></mark>,<strong> </strong>Songyang Han, Sanbao Su, Shuo Han, Shaofeng Zou, and Fei Miao</p></li></ol><ol type="1" id="b8aecfe6-9e35-477e-b0f0-be58740be9d8" class="numbered-list" start="2"><li><strong>Robust Multi-Agent Reinforcement Learning Under Adversarial State Perturbations (preprint)</strong><p id="d23a4a1d-61a2-40b5-8da9-cbc4612958ca" class="block-color-blue">Songyang Han, Sanbao Su, <mark class="highlight-red"><strong>Sihong He</strong></mark>, Shuo Han, Haizhao Yang, and Fei Miao</p></li></ol><ol type="1" id="e92971a2-c4cd-4e54-96b5-957f2b1988d4" class="numbered-list" start="3"><li><strong>Robust Multi-Agent Reinforcement Learning Under Training Partners’ Policy Uncertainty (preprint)</strong><p id="53daa71e-1864-4c56-a8fd-e0da69a3137d" class="block-color-blue">Songyang Han, <mark class="highlight-red"><strong>Sihong He</strong></mark>, Zhili Zhang, and Fei Miao<em>preprint</em></p></li></ol><ol type="1" id="edb7c1d7-1b2a-4eb5-8622-6218787caaec" class="numbered-list" start="4"><li><strong>Robust Electric Vehicle Balancing under Demand and Supply Uncertainties Using Constrained Multi-Agent Reinforcement Learning (preprint)</strong><p id="451d57b0-2887-40cb-b904-ce2b09526530" class="block-color-blue"><mark class="highlight-red"><strong>Sihong He</strong></mark>, Shuo Han, and Fei Miao</p></li></ol><ol type="1" id="637e696f-aa2b-47cf-a8bb-b3f4cbbe0dbf" class="numbered-list" start="5"><li><strong>Data-Driven Distributionally Robust Electric Vehicle Balancing for Mobility-on-Demand Systems under Demand and Supply Uncertainties (IROS 2022)</strong><p id="507118a1-5573-4e25-8a77-fded12c20f39" class="block-color-blue"><mark class="highlight-red"><strong>Sihong He</strong></mark>, Lynn Pepin, Guang Wang, Desheng Zhang, and Fei Miao</p></li></ol><h2 id="e999683a-0ca9-483d-97c9-c5f6544e8a67" class="">Education</h2><ul id="e411ab4d-c42e-46aa-ae5e-1daeec8bae20" class="bulleted-list"><li style="list-style-type:disc">Ph.D. Student in Computer Science, University of Connecticut, 2024 (expect)</li></ul><ul id="7a1d7c75-8515-4146-979b-263f230119e5" class="bulleted-list"><li style="list-style-type:disc">M.S. in Statistics, University of California, Irvine, 2019</li></ul><ul id="9b3601a8-a032-4503-8356-14e6e4898050" class="bulleted-list"><li style="list-style-type:disc">B.S. in Financial Mathematics, Southern University of Science and Technology, 2017</li></ul><h2 id="534ce06a-d258-45dc-8c07-8bbf1dc5347d" class="">Honors</h2><ul id="7e5c8e5b-7a04-4ef7-ac18-56e9f3574e93" class="bulleted-list"><li style="list-style-type:disc">2022<ul id="96eb3a7c-7ff8-4e5a-9829-32a0967f7ac8" class="bulleted-list"><li style="list-style-type:circle">Predoctoral Prize for Research Excellent</li></ul><ul id="deaebb1a-36d6-4996-8ae0-9239d319d3f8" class="bulleted-list"><li style="list-style-type:circle">Invited Presentation at the Interdisciplinary Forum on Intelligent Connected Future and Intelligent Transportation</li></ul></li></ul><ul id="9754d85d-98c2-4a96-854b-1e70492aa171" class="bulleted-list"><li style="list-style-type:disc">2021<ul id="cf9cde82-0b72-46bb-babe-c600c219066b" class="bulleted-list"><li style="list-style-type:circle">Predoctoral Fellowship</li></ul><ul id="4764c789-1226-46f1-ab52-65286dcea493" class="bulleted-list"><li style="list-style-type:circle">Selected Student Presentation at the NSF Cyber-Physical Systems Principal Investigators’ Meeting</li></ul></li></ul><ul id="7eba1832-6d03-4e20-9487-e8f813ba0fca" class="bulleted-list"><li style="list-style-type:disc">2020: GE Advanced Manufacturing Fellowship; Cigna Graduate Scholarship</li></ul><ul id="6d01522c-c871-43e1-ac9d-b5ba7b983909" class="bulleted-list"><li style="list-style-type:disc">2019: Cigna Graduate Scholarship</li></ul><ul id="7fa8d7ce-f745-450c-81bb-70acc795fa64" class="bulleted-list"><li style="list-style-type:disc">2017: Outstanding Student Award</li></ul><ul id="f6574fb8-32dd-4ace-86f1-ec08f9538616" class="bulleted-list"><li style="list-style-type:disc">2016: Startup Scholarship; Sunshine Fellowship</li></ul><ul id="3e5b6472-070d-45c5-bcbf-d7a4dfb46e6a" class="bulleted-list"><li style="list-style-type:disc">2015: Startup Scholarship; Student Research Grant from Guangdong Province</li></ul><ul id="a78b40ed-593d-4470-adfc-4d73fe4cd243" class="bulleted-list"><li style="list-style-type:disc">2014: Government Scholarship; Yunlong Fellowship</li></ul><ul id="8bcfbfb6-df52-4d1b-afb1-0f8710d759b6" class="bulleted-list"><li style="list-style-type:disc">2013: Freshman Scholarship</li></ul><h2 id="060eac60-be76-4d14-85cb-2dde897cac07" class="">Services</h2><ul id="0b5db632-b44b-4b86-9817-cc7c579b6a5b" class="bulleted-list"><li style="list-style-type:disc">Editorial Board Member<ul id="8f126f2e-11ae-4644-a894-1425faa0b4fe" class="bulleted-list"><li style="list-style-type:circle"> American Journal of Science, Engineering, and Technology</li></ul><ul id="d07ca36a-b9b3-45f7-819e-0dc98c13ce69" class="bulleted-list"><li style="list-style-type:circle">Journal of Emerging Investigators</li></ul></li></ul><ul id="edd52292-558b-4655-a787-66d2b905796a" class="bulleted-list"><li style="list-style-type:disc">Reviewer<ul id="a1c31027-71fe-4834-b4f2-bc193fc70366" class="bulleted-list"><li style="list-style-type:circle">Ad Hoc Networks</li></ul><ul id="225f184a-a242-41b0-af8e-dc78022c71b1" class="bulleted-list"><li style="list-style-type:circle">Flexible and Printed Electronics</li></ul><ul id="5a1d9c6b-0073-4766-bd6b-fbdb95815929" class="bulleted-list"><li style="list-style-type:circle">Transactions on Knowledge and Data Engineering (TKDE)</li></ul><ul id="437853eb-8d10-425d-a40a-be719824fc47" class="bulleted-list"><li style="list-style-type:circle">Transactions on Neural Networks and Learning Systems (TNNLS)</li></ul><ul id="0cf87e3a-1048-45d5-acf6-988383c0e673" class="bulleted-list"><li style="list-style-type:circle">American Control Conference (ACC)</li></ul><ul id="e839a4c4-a60d-4031-b2f4-ca143d30f869" class="bulleted-list"><li style="list-style-type:circle">Conference on Decision and Control (CDC)</li></ul><ul id="037a02dd-760d-40d8-81ce-722d73863bcf" class="bulleted-list"><li style="list-style-type:circle">Association for the Advancement of Artificial Intelligence (AAAI)</li></ul></li></ul><ul id="554042b4-6562-4845-b064-acc09ff4a0a3" class="bulleted-list"><li style="list-style-type:disc">Others<ul id="331f24d7-e4b6-4e68-a39c-b1d5e66ef337" class="bulleted-list"><li style="list-style-type:circle">Member of Diversity Communications Advisory Group for School of Engineering, University of Connecticut</li></ul></li></ul><p id="1ccdee87-e253-43dc-b96c-2c26db874cf2" class="">
+</p></div></article></body></html>
