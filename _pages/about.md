@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: " Explore and Enjoy. "
+subtitle: " Explore and Enjoy! "
 
 profile:
   align: left
