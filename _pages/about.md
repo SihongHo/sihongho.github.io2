@@ -8,9 +8,9 @@ profile:
   align: left
   image: prof_pic.png
   image_circular: false # crops the image to make it circular
-  address: >
-    <p>371 Fairfield Way, ITE 221,</p>
-    <p>Storrs, CT 06269-4155</p>
+  # address: >
+  #   <p>371 Fairfield Way, ITE 221,</p>
+  #   <p>Storrs, CT 06269-4155</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
